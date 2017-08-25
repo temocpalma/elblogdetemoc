@@ -9,7 +9,7 @@ pygmentsUseClasses = true
 [Params]
   subtitle = "Beginner Programmer"
   logo = "img/ship.png"
-  favicon = "img/favicon.ico"
+  favicon = "img/icoprogramming.ico"
   commit = false
 
 [Author]
