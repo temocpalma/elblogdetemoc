@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "El Blog de Temoc"
 theme = "retrofulhugo"
 pygmentsUseClasses = true
-#googleAnalytics = "XXX"
+googleAnalytics = "UA-105312001-1"
 #disqusShortname = "XXX"
 
 [Params]
