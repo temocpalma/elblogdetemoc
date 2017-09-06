@@ -52,3 +52,16 @@ Actualmente trabajo con [TechMinds](http://techminds.com.mx/) / [MakingDevs](htt
     <img src="/img/jenkins.png" width="200" title="Jenkins"/>
   </div>
 </div>
+
+<br/>
+
+## Pasatiempos e intereses
+
+### Historia
+
+Principalmente Historia de México, y más específicamente que hablen sobre datos poco conocidos de los sucesos, personajes y sitios históricos del país. También me gusta todo lo relacionado a las Guerras Mundiales.
+
+### Coleccionista Aficionado
+
+Me gusta la numismática, tengo una pequeña colección de monedas y billetes nacionales viejos y recientes, y otra de billetes extranjeros actuales. También me gusta coleccionar juguetes, actualmente tengo una colección de aviones, otra de trailers hotwheels, y recientemente inicié una de Transformers (por ahora con sólo 2 piezas). Pronto pondré una sección donde incluiré fotos de las distintas colecciones.
+
