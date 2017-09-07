@@ -1,27 +1,20 @@
 baseurl = "https://temocpalma.github.io/"
 languageCode = "en-us"
 title = "El Blog de Temoc"
-theme = "retrofulhugo"
+theme = "docdock"
 pygmentsUseClasses = true
 googleAnalytics = "UA-105312001-1"
 #disqusShortname = "XXX"
 
-[Params]
-  subtitle = "Beginner Programmer"
-  logo = "img/ship.png"
-  favicon = "img/icoprogramming.ico"
-  commit = false
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
 
-[Author]
-	handle = "Temoc Palma"
-  name = "Cuahthémoc Palma Gutiérrez"
-  email = "temopalmag@gmail.com"
-  github = "temocpalma"
-  twitter = "cpalmag"
-  facebook = "cuauh.palma"
+[[menu.shortcuts]]
+name = "<i class='fa fa-user-circle'></i> Quién soy..."
+url = "/about"
+weight = 10
 
-
-#[[menu.main]]
-#    name = "About"
-#    url = "/page/about/"
-#    weight = 2
+[[menu.shortcuts]]
+name = "<i class='fa fa-address-book'></i> Sígueme"
+url = "/socialnet"
+weight = 20

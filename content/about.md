@@ -1,7 +1,6 @@
 +++
-title = "Acerca de mi"
-date = "2017-08-24"
-menu ="main"
+title = "Quién soy"
+description = "Acerca de mi"
 +++
 
 <img src="/img/me.png" width="140" height="200" title="Yo merengues!!!" />
@@ -14,16 +13,9 @@ Soy programador, aún "novato", desde el 2007.
 
 Actualmente trabajo con [TechMinds](http://techminds.com.mx/) / [MakingDevs](http://makingdevs.com/) en un proyecto [Grails](https://grails.org/)
 
-<div class="row">
-  <div class="col-md-6 text-center">
-    <a href="http://techminds.com.mx/"><img src="/img/techmindslogo.png" width="400" title="TechMinds"/></a>
-  </div>
-  <div class="col-md-6 text-center">
-    <a href="http://makingdevs.com/"><img src="/img/mkdevslogo.png" width="180" title="MakingDevs"/></a>
-  </div>
-</div>
+![TechMinds](/img/techmindslogo.png?width=400px&classes=border,shadow)
+![MakingDevs](/img/mkdevslogo.png?width=180px&classes=border,shadow)
 
-<br/>
 ## Tecnologías
 
 <div class="row">

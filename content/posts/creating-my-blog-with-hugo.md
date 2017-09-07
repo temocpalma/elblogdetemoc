@@ -1,16 +1,12 @@
----
-author: "Temoc Palma"
-date: 2017-09-07
-linktitle: Creando el blog con HUGO, problemas y soluciones
-menu:
-  main:
-    parent: posts
-title: Creando el blog con HUGO, problemas y soluciones
-weight: 10
----
++++
+type="page"
+title = "Creación del blog"
+pre ="<i class='fa fa-anchor'></i> "
+weight = 1
+date = "2017-09-07"
++++
 
-
-## Mi peregrinación en la creación del blog
+## Historia de la creación del blog
 <!--more-->
 En este post quiero contarles acerca de la experiencia que tuve creando este blog.
 
