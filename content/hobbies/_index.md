@@ -1,7 +1,7 @@
 +++
-title = "Posts"
+title = "Hobbies"
 description = ""
-weight = 2
+weight = 3
 alwaysopen = false
 +++
 
