@@ -1,6 +1,7 @@
 +++
 title = "Billetes Nacionales"
 type="slide"
+pre ="<i class='fa fa-anchor'></i> "
 
 theme = "sky"
 [revealOptions]
