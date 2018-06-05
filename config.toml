@@ -18,3 +18,6 @@ weight = 10
 name = "<i class='fa fa-address-book'></i> Sígueme"
 url = "/socialnet"
 weight = 20
+
+[params]
+themeStyle = "original"
