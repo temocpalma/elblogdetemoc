@@ -7,7 +7,7 @@ description = "Libros sobre Historia"
 
 > Plutarco Elías Calles está considerado como fundador del sistema político mexicano moderno, con la creación en 1929 del Partido Nacional Revolucionario, que más tarde se convertiría en el Partido Revolucionario Institucional. El libro trata de los orígenes de Calles, pasando por su difícil relación con los Estados Unidos y, el conflicto religioso, hasta la gran reforma política.
 
-<h4>Hernán Cortez: Inventor de México <small>Juan Miralles</small></h4>
+<h4>Hernán Cortés: Inventor de México <small>Juan Miralles</small></h4>
 
 > Todos conocemos la figura de Hernán Cortés, casi todo lector tiene una opinión sobre su polémica incidencia histórica, que suele concitar la animadversión (sobre todo en México) o la admiración irrestricta, sin matices. Pero pocos conocen de verdad su vida. Juan Miralles se ha dedicado durante casi treinta años a investigar sobre el personaje del conquistador y nos entrega la que tal vez sea la primera biografía exhaustiva de Cortés, la que hace un mayor acopio de los testimonios de primera mano de los cronistas.
 
