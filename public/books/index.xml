@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on El Blog de Temoc</title>
+    <link>https://temocpalma.github.io/books/</link>
+    <description>Recent content in Books on El Blog de Temoc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://temocpalma.github.io/books/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ciencia</title>
+      <link>https://temocpalma.github.io/books/books_science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temocpalma.github.io/books/books_science/</guid>
+      <description>De los números y su historia Isaac Asimov  Este libro nos proporciona una amplia información sobre los números, desde lo elemental hasta lo sorprendente, ya que discurre sobre cuestiones matemáticas y numéricas tales como: la importancia del cero, los únicos dos números que pueden entender las computadoras, qué significa realmente el infinito, la cuadratura del círculo, por qué los números imaginarios son reales, el tamaño real del Universo en protones, porqué el mundo está dividido en islas, y otras informaciones acerca de los números, desde lo elemental hasta lo esotérico y lo sorprendente.</description>
+    </item>
+    
+    <item>
+      <title>Ciencia Ficción</title>
+      <link>https://temocpalma.github.io/books/books_scifi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temocpalma.github.io/books/books_scifi/</guid>
+      <description>Fundación Isaac Asimov  El hombre se ha dispersado por los planetas de la galaxia. La capital del Imperio es Trántor, centro de todas las intrigas y símbolo de la corrupción imperial. Un psicohistoriador, Hari Seldon, prevé, gracias a su ciencia fundada en el estudio matemático de los hechos históricos, el derrumbamiento del Imperio y el retorno a la barbarie por varios milenios. Seldon decide crear dos Fundaciones, situadas en cada extremo de la galaxia, a fin de reducir este periodo de barbarie a mil años.</description>
+    </item>
+    
+    <item>
+      <title>Historia</title>
+      <link>https://temocpalma.github.io/books/books_history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temocpalma.github.io/books/books_history/</guid>
+      <description>Plutarco Elías Calles: Reformar desde el origen Enrique Krauze  Plutarco Elías Calles está considerado como fundador del sistema político mexicano moderno, con la creación en 1929 del Partido Nacional Revolucionario, que más tarde se convertiría en el Partido Revolucionario Institucional. El libro trata de los orígenes de Calles, pasando por su difícil relación con los Estados Unidos y, el conflicto religioso, hasta la gran reforma política.
+ Hernán Cortés: Inventor de México Juan Miralles  Todos conocemos la figura de Hernán Cortés, casi todo lector tiene una opinión sobre su polémica incidencia histórica, que suele concitar la animadversión (sobre todo en México) o la admiración irrestricta, sin matices.</description>
+    </item>
+    
+    <item>
+      <title>Novelas</title>
+      <link>https://temocpalma.github.io/books/books_novels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temocpalma.github.io/books/books_novels/</guid>
+      <description>Once Minutos Paulo Coehlo  Maria es de un pueblo situado al norte de Brasil. Todavía adolescente, viaja a Río de Janeiro, donde conoce a un empresario que le ofrece un buen trabajo en Ginebra. Allí, Maria sueña con encontrar fama y fortuna, pero acabará ejerciendo la prostitución. El aprendizaje que extraerá de sus duras experiencias modificará para siempre su actitud ante sí misma y ante la vida.
+Como un cuento de hadas para adultos, Once minutos es una novela que explora la naturaleza del sexo y del amor, la intensa y difícil relación entre cuerpo y alma, y cómo alcanzar la perfecta unión entre ambos.</description>
+    </item>
+    
+    <item>
+      <title>TI</title>
+      <link>https://temocpalma.github.io/books/books_ti/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temocpalma.github.io/books/books_ti/</guid>
+      <description>Los Innovadores: Los genios que inventaron el futuro Walter Isaacson  En esta magistral saga, Isaacson arranca con Ada Lovelace, la hija de lord Byron, una pionera de la programación informática en la década de 1840. Además, presenta a las extraordinarias personas que crearon la revolución digital que nos rodea, gente como Vannevar Bush, Alan Turing, John von Neumann, J.C.R. Licklider, Doug Engelbart, Robert Noyce, Bill Gates, Steve Wozniak, Steve Jobs, Tim Berners-Lee o Larry Page.</description>
+    </item>
+    
+  </channel>
+</rss>

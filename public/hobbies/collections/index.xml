@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Colecciones on El Blog de Temoc</title>
+    <link>https://temocpalma.github.io/hobbies/collections/</link>
+    <description>Recent content in Colecciones on El Blog de Temoc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://temocpalma.github.io/hobbies/collections/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Billetes Nacionales</title>
+      <link>https://temocpalma.github.io/hobbies/collections/national_bills/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temocpalma.github.io/hobbies/collections/national_bills/</guid>
+      <description>American Bank Note Company Ver Album
+Banco de México SA Ver Album
+Banco de México Recientes Cerrar</description>
+    </item>
+    
+    <item>
+      <title>Juguetes</title>
+      <link>https://temocpalma.github.io/hobbies/collections/toys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://temocpalma.github.io/hobbies/collections/toys/</guid>
+      <description>Legos y similares Ver Album
+Cerrar</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,155 @@
+[
+{
+	"uri": "https://temocpalma.github.io/posts/development/using-spock-with-unit-test-on-groovy/",
+	"title": "Creación de Pruebas Unitarias con Spock y Groovy",
+	"tags": [],
+	"description": "",
+	"content": "Introducción  Las creación de pruebas automatizadas de software son una tarea aún poco apreciada en el desarrollo de software, ya que muchos las consideran un trabajo \u0026ldquo;extra\u0026rdquo; no necesario de realizar, principalmente cuando el programador tiene ya dominio en la solución de problemas en el lenguaje en el que se desenvuelva; ya que muchas veces se escribe más código en las pruebas que en el componente que se está probando.\nSin embargo, esa forma de pensamiento, es equivocada. Las pruebas automatizadas son una herramienta que no sólo nos ayuda a garantizar en gran medida que el componente de software desarrollado funcione bien (que hace lo que tiene que hacer) sino que además nos ayuda a mejorar las buenas prácticas a la hora de programar (escribimos mejor código usando pruebas).\nAdemás, ayudan a mantener la estabilidad de la aplicación completa, al poder ejecutarse de una forma muy rápida, cientos o hasta miles de pruebas de los componentes involucrados en ella, de forma que cuando algún programador cambia o modifica lógica de esos componentes tendrá que ajustar o complementar los tests relacionados, de lo contrario, las pruebas fallarán.\nDefiniciones  Pruebas Unitarias: Son pruebas que se aplican a un componente muy específico de la aplicación (un método). Son las más básicas de las pruebas, y en ella no se consideran afectaciones a la base de datos o archivos de configuración de la aplicación, por lo que esos elementos se \u0026ldquo;emulan\u0026rdquo; para fines de la prueba.\n SpockFramework: Es un framework que nos ayuda a crear pruebas usando un notación muy intuitiva (especificaciones), para aplicaciones Java y Groovy.\n Groovy: Es un lenguaje dinámico para plataforma de Java.\n  Ejemplo Para mostrar básicamente cómo crear pruebas unitarias con Spock, usaré una pequeña aplicación Groovy con Gradle. La aplicación consiste en clasificar a una persona en un grupo dada su edad de la siguiente manera:\n 0 - 11 años, Infantes 12 - 18 años, Adolescentes 19 - 30 años, Jóvenes 30 - 60 años, Adultos 61 o más, Adultos Mayores  Agregar la dependencia a la aplicación Lo primero es agregar la dependencia necesaria a la aplicación para poder utilizar el framework (en el archivo build.gradle):\ntestCompile \u0026quot;org.spockframework:spock-core:1.1-groovy-2.4\u0026quot;  Creando las pruebas Dentro de la carpeta de pruebas de la aplicación (src/test/groovy/com/exampletests/org) creamos la clase de pruebas correspondiente, con un test de ejemplo:\npackage com.exampletests.edu import spock.lang.* class ClasificationServiceSpec extends Specification { void \u0026quot;Example test\u0026quot;() { setup: int a=1 int b=0 when: def result = a + b then: result == 1 } }  Para ejecutar los test, en la consola de comandos, ubicados en la carpeta raíz del proyecto de la aplicación, tecleamos: gradle test\nLa especificación (el test) en este ejemplo incluye 3 secciones:\nsetup, para inicializar los valores necesarios para la prueba\nwhen, donde se indica el proceso que se quiere probar con los valores definidos en la sección anterior\nthen, donde se definen los resultados esperados del proceso\nLas secciones requeridas son when y then\nCreando las pruebas para solucionar el problema Cambiemos la prueba anterior por la siguiente:\nvoid \u0026quot;Should get CHILDREN category when the age is between 0 and 11 years old\u0026quot;() { given: int age = 5 when: String category = classificationService.getCategoryForAge(age) then: category == \u0026quot;CHILDREN\u0026quot; }  Si se corren las pruebas con el comando gradle test arrojará un error, ya que el elemento classificationService no existe aún y la clase de pruebas no la tiene definida.\nVamos a crear la clase de servicio con el método que devolverá la categoría correspondiente según la edad que se indique. En la carpeta src/main/groovy/com/exampletests/edu tecleamos el siguiente código:\npackage com.exampletests.edu class ClassificationService { String getCategoryForAge(int age) { \u0026quot;CHILDREN\u0026quot; } }  Ahora en la clase de pruebas, agregamos una instancia de la clase de servicio:\nclass ClasificationServiceSpec extends Specification { ClassificationService classificationService = new ClassificationService() void \u0026quot;Should get CHILDREN category when the age is between 0 and 11 years old\u0026quot;() { ... } }  Ejecutemos las pruebas nuevamente con el comando gradle test, ahora no debería haber errores.\nBien, la prueba creada sólo cubre un sólo caso de todos los que el componente puede responder. Para incluir los otros casos, usaremos una tabla de datos.\nEn nuestra clase de pruebas, agreguemos la siguiente especificación:\n@Unroll void \u0026quot;Should get the category #theCategory when the age is #theAge\u0026quot;() { given: int age = theAge when: String category = classificationService.getCategoryForAge(age) then: category == theCategory where: theAge || theCategory 5 || \u0026quot;CHILDREN\u0026quot; 15 || \u0026quot;TEENAGERS\u0026quot; 25 || \u0026quot;YOUNGS\u0026quot; 35 || \u0026quot;ADULTS\u0026quot; 45 || \u0026quot;ADULTS\u0026quot; 65 || \u0026quot;OLDERS\u0026quot; -1 || \u0026quot;UNDEFINED\u0026quot; }  Al ejecutar los tests nuevamente, no debería haber errores.\nHagamos que uno de los registros de la tabla de datos falle. Cambiemos el valor esperado de la fila con la edad 35 a \u0026ldquo;YOUNGS\u0026rdquo;, y corramos las pruebas.\nAhora el resultado debería ser fallido, mostrando los resultados como se muestra en la figura siguiente:\nPodemos ver que en el resultado mostrado nos indica en el nombre del test los valores usados, que fueron los que fallaron. Además vemos que hay una referencia a un archivo html, generado por el framework, el cuál es un reporte bastante completo sobre las pruebas, si lo abrimos podemos ver la lista de las pruebas fallidas:\nAl darle clic al link del nombre del test fallido, nos da un reporte de la falla para este test en particular:\nComo se puede observar, la creación de pruebas unitarias usando Spock, es bastante sencillo. El framework nos da un reporte bastante útil para poder ir resolviendo las fallas de los componentes correspondientes.\n"
+},
+{
+	"uri": "https://temocpalma.github.io/posts/creating-my-blog-with-hugo/",
+	"title": "Creación del blog",
+	"tags": [],
+	"description": "",
+	"content": "Historia de la creación del blog  En este post quiero contarles acerca de la experiencia que tuve creando este blog.\nA modo de introducción, les diré cómo fue que me animé a crearlo. La idea de tener un lugar donde poder expresar el aprendizaje adquirido desde inicios de 2016 a la fecha, ya la tenía pero por diversos motivos no lo hacía, el principal de ellos fue simplemente el no intentarlo.\nAsí que hace unos días por fin me di el tiempo. Y decidí hacerlo con HUGO, por referencia de MakingDevs, ya que a los compañeros y amigos que han llegado a colaborar, nuestro guía José Juan, les ha pedido como parte inicial de sus labores, el crear su blog con esta herramienta.\nLa creación fue relativamente sencilla, sólo hay que seguir los pasos indicados en la documentación oficial de HUGO, específicamente el Inicio Rápido. En unos cuantos minutos se tiene el sitio listo en forma local.\nLos problemas con los que me topé fueron pocos y no tan complicados de resolver, algunos fueron simplemente por omitir algún paso, otros por ser cosas desconocidas para mi.\nUno de estos problemas fue la personalización del tema que elegí, de esto puedo decir que requiere checar bien la documentación del mismo tema, principalmente en lo que respecta a la configuración, y un poco de análisis de los layouts para identificar los puntos que se quieran personalizar, lo cual no es tan complicado ya que son bastante intuitivos.\nRelacionado con el tema, también tuve problema con la versión de HUGO que instalé inicialmente, siguiendo la documentación de HUGO para Ubuntu. Por lo que tuve reinstalarlo descargando el paquete con la versión más reciente.\nOtro punto en el que se me complicó levemente el asunto, fue al publicarlo. Acá fue la prisa de ya tener el blog en la red, la causa por la que omití un paso, lo cual fue solucionado rápido al releer las indicaciones.\nY por último, tuve otro problemilla con la creación de la primera página del blog, y no fue precisamente el uso de markdown, ya que hace tiempo conocí este lenguaje de marcado, y sólo tuve que volver a echar un vistazo a la sintaxis. El problema fue que no sabía que el texto incluido al inicio de las páginas que el tema elegido traía, es una sección de metadatos que el tema utiliza para desplegar los listados, eso me causó confusión y tardé en descubrirlo.\nY pues después de todo lo que les conté, ahora ya está aquí.\nComo conclusión diré que el objetivo de este blog es compartir conocimiento, técnico principalmente, y algo del conocimiento relacionado a mis pasatiempos.\nComo Post-Data, les dejo otros links (además del Inicio Rápido mencionado arriba) de los que me apoyé para crear el blog:\nhttps://gohugo.io/getting-started/installing/\nhttps://www.digitalocean.com/community/tutorials/how-to-install-and-use-hugo-a-static-site-generator-on-ubuntu-14-04\nhttps://github.com/gohugoio/hugo/releases\nhttp://gohugo.io/themes/installing-and-using-themes/\nhttps://gohugo.io/hosting-and-deployment/hosting-on-github/\nhttp://joedicastro.com/pages/markdown.html\n"
+},
+{
+	"uri": "https://temocpalma.github.io/hobbies/collections/",
+	"title": "Colecciones",
+	"tags": [],
+	"description": "",
+	"content": "  Billetes Nacionales   Juguetes   "
+},
+{
+	"uri": "https://temocpalma.github.io/posts/history/",
+	"title": "Historia",
+	"tags": [],
+	"description": "",
+	"content": "  "
+},
+{
+	"uri": "https://temocpalma.github.io/posts/development/",
+	"title": "Programación",
+	"tags": [],
+	"description": "",
+	"content": "  Creación de Pruebas Unitarias con Spock y Groovy   "
+},
+{
+	"uri": "https://temocpalma.github.io/posts/",
+	"title": "Posts",
+	"tags": [],
+	"description": "",
+	"content": "  Creación del blog   Programación   Historia   "
+},
+{
+	"uri": "https://temocpalma.github.io/hobbies/travels/",
+	"title": "Viajes",
+	"tags": [],
+	"description": "",
+	"content": "  "
+},
+{
+	"uri": "https://temocpalma.github.io/hobbies/",
+	"title": "Hobbies",
+	"tags": [],
+	"description": "",
+	"content": "  Colecciones   Viajes   "
+},
+{
+	"uri": "https://temocpalma.github.io/books/",
+	"title": "Books",
+	"tags": [],
+	"description": "",
+	"content": "  Ciencia   Ciencia Ficción   Historia   Novelas   TI   "
+},
+{
+	"uri": "https://temocpalma.github.io/_header/",
+	"title": "header",
+	"tags": [],
+	"description": "",
+	"content": "EL BLOG DE TEMOC\n"
+},
+{
+	"uri": "https://temocpalma.github.io/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " EL BLOG DE TEMOC Eterno programador principiante, aficionado a la historia y coleccionista amateur\u0026hellip;\n"
+},
+{
+	"uri": "https://temocpalma.github.io/hobbies/collections/national_bills/",
+	"title": "Billetes Nacionales",
+	"tags": [],
+	"description": "",
+	"content": " American Bank Note Company Ver Album\nBanco de México SA Ver Album\nBanco de México Recientes Cerrar\n"
+},
+{
+	"uri": "https://temocpalma.github.io/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://temocpalma.github.io/books/books_science/",
+	"title": "Ciencia",
+	"tags": [],
+	"description": "Libros sobre Ciencia",
+	"content": "De los números y su historia Isaac Asimov  Este libro nos proporciona una amplia información sobre los números, desde lo elemental hasta lo sorprendente, ya que discurre sobre cuestiones matemáticas y numéricas tales como: la importancia del cero, los únicos dos números que pueden entender las computadoras, qué significa realmente el infinito, la cuadratura del círculo, por qué los números imaginarios son reales, el tamaño real del Universo en protones, porqué el mundo está dividido en islas, y otras informaciones acerca de los números, desde lo elemental hasta lo esotérico y lo sorprendente.\nExamina nuestro concepto del tiempo y el por qué de su estructura y proporciona un sintético panorama de la historia de la matemática y de sus figuras más notables.\n Cómo descubrimos el petróleo Isaac Asimov  La actual crisis energética ha hecho que todos nos planteemos una serie de cuestiones fundamentales: ¿cuánto tiempo durará el petróleo?, ¿qué es el petróleo en realidad?, ¿por qué es tan importante?, ¿de dónde proviene?, ¿cómo fue descubierto?, ¿qué haremos cuando se sequen los pozos?\n El sol brilla luminoso Isaac Asimov  En este libro, El Sol Brilla Luminoso, Asimov recopila una serie de artículos, publicados en diferentes revistas y actualizados por él mismo, con cuya selección trata de abarcar los temas más candentes de la ciencia actual. Desde el origen, la estructura y la evolución de las estrellas, haciéndo un énfasis especial en la estrella que se halla más próxima a nosotros, el Sol, pasando por los cuerpos que orbitan a su alrededor (planetas y satélites), hasta otros temas, tales como los elementos químicos (base del mundo material y de la vida) y las técnicas de clonación, de gran actualidad y tema permanente de polémica. Sin embargo, Asimov no reflexiona sólo acerca del mundo material que nos rodea, sino que se aventura también en el campo de la reflexión sobre el propio ser humano y trata asimismo de las tareas desarrolladas por los científicos en busca de nuevos avances y conocimientos.\n La vida inmortal de Henrietta Lacks Rebecca Skloot  Se llamaba Henrietta Lacks. Era una campesina cuyas células, que fueron tomadas sin su conocimiento, siguen vivas a pesar de que ella lleva muerta más de sesenta años y se han convertido en una de las herramientas más importantes de la medicina: fueron vitales para el desarrollo de la vacuna contra la polio, desvelaron secretos sobre el cáncer o los virus, ayudaron a realizar importantes avances como la fertilización in vitro o la clonación y han sido compradas y vendidas por laboratorios de todo el mundo, generando grandes beneficios económicos a la industria farmacéutica. Sin embargo, su familia, que no puede permitirse pagar un seguro médico, vivió cincuenta años sin conocer la historia de Henrietta, y todavía hoy lucha por defender el legado de su madre y abuela.\nLa periodista y escritora científica Rebecca Skloot realiza una apasionante labor de investigación que nos transporta desde la pequeña y decadente ciudad natal de Henrietta, en los años cincuenta, hasta el Baltimore actual, en un viaje extraordinario que mezcla las vivencias de la actual familia Lacks con la historia de unas células que todavía hoy son un misterio de la biología.\n "
+},
+{
+	"uri": "https://temocpalma.github.io/books/books_scifi/",
+	"title": "Ciencia Ficción",
+	"tags": [],
+	"description": "Libros de Ciencia Ficción",
+	"content": "Fundación Isaac Asimov  El hombre se ha dispersado por los planetas de la galaxia. La capital del Imperio es Trántor, centro de todas las intrigas y símbolo de la corrupción imperial. Un psicohistoriador, Hari Seldon, prevé, gracias a su ciencia fundada en el estudio matemático de los hechos históricos, el derrumbamiento del Imperio y el retorno a la barbarie por varios milenios. Seldon decide crear dos Fundaciones, situadas en cada extremo de la galaxia, a fin de reducir este periodo de barbarie a mil años.\n "
+},
+{
+	"uri": "https://temocpalma.github.io/books/books_history/",
+	"title": "Historia",
+	"tags": [],
+	"description": "Libros sobre Historia",
+	"content": "Plutarco Elías Calles: Reformar desde el origen Enrique Krauze  Plutarco Elías Calles está considerado como fundador del sistema político mexicano moderno, con la creación en 1929 del Partido Nacional Revolucionario, que más tarde se convertiría en el Partido Revolucionario Institucional. El libro trata de los orígenes de Calles, pasando por su difícil relación con los Estados Unidos y, el conflicto religioso, hasta la gran reforma política.\n Hernán Cortés: Inventor de México Juan Miralles  Todos conocemos la figura de Hernán Cortés, casi todo lector tiene una opinión sobre su polémica incidencia histórica, que suele concitar la animadversión (sobre todo en México) o la admiración irrestricta, sin matices. Pero pocos conocen de verdad su vida. Juan Miralles se ha dedicado durante casi treinta años a investigar sobre el personaje del conquistador y nos entrega la que tal vez sea la primera biografía exhaustiva de Cortés, la que hace un mayor acopio de los testimonios de primera mano de los cronistas.\n Arrebatos Carnales I: Las pasiones que consumieron a los protagonistas de la historia de México Francisco Martín Moreno  A lo largo de los siglos, hombres y mujeres han sido arrastrados por el inevitable impulso de poseer a quien parece ostentar el sentido de la vida. Y de esta atracción impetuosa no se libran los grandes forjadores del destino de una nación, ¿qué apetitos y obsesiones sirvieron de causa para algunos de los protagonistas de la historia de México? Con su singular estilo, donde confluyen una rigurosa investigación y la maestría narrativa, Francisco Martín Moreno hurga en la memoria de nuestro país y se adentra en un viaje íntimo hacia el corazón y la alcoba de la monja, el dictador, el revolucionario, el político reformador, el emperador y el líder de la Independencia.\n Arrebatos Carnales III: Las pasiones que consumieron a los protagonistas de la historia de México Francisco Martín Moreno  En la tercera entrega de los arrebatos carnales, que su propio autor ha llamado la trilogía erótica de México, Francisco Martín Moreno explora las pasiones que movieron a personajes como Gustavo Díaz Ordaz, Melchor Ocampo, Venustiano Carranza, Felipe Carrillo Puerto, o el gran inquisidor. El lector de este libro abre sus páginas como si fueran el ojo de una cerradura para conocer los secretos de alcoba mejor guardados de los hombres y mujeres que forjaron la nación mexicana, en un viaje histórico y erótico.\n Historia Verdadera de la Conquista de la Nueva España Bernal Díaz del Castillo  La \u0026ldquo;Historia verdadera de la conquista de la Nueva España\u0026rdquo; (1568) es una obra de Bernal Díaz del Castillo, que fue uno de los soldados participantes en la mayoría de las jornadas de la conquista de México en el siglo XVI.\n "
+},
+{
+	"uri": "https://temocpalma.github.io/hobbies/collections/toys/",
+	"title": "Juguetes",
+	"tags": [],
+	"description": "",
+	"content": " Legos y similares Ver Album\nCerrar\n"
+},
+{
+	"uri": "https://temocpalma.github.io/socialnet/",
+	"title": "Mis Redes Sociales",
+	"tags": [],
+	"description": "Redes Sociales",
+	"content": " cuauh.palma /  @cpalmag /  +TemocPaGu /  temocpalma   "
+},
+{
+	"uri": "https://temocpalma.github.io/books/books_novels/",
+	"title": "Novelas",
+	"tags": [],
+	"description": "Libros de Novelas",
+	"content": "Once Minutos Paulo Coehlo  Maria es de un pueblo situado al norte de Brasil. Todavía adolescente, viaja a Río de Janeiro, donde conoce a un empresario que le ofrece un buen trabajo en Ginebra. Allí, Maria sueña con encontrar fama y fortuna, pero acabará ejerciendo la prostitución. El aprendizaje que extraerá de sus duras experiencias modificará para siempre su actitud ante sí misma y ante la vida.\nComo un cuento de hadas para adultos, Once minutos es una novela que explora la naturaleza del sexo y del amor, la intensa y difícil relación entre cuerpo y alma, y cómo alcanzar la perfecta unión entre ambos.\n Un mexicano más: crisis de la educación en México Juan Sánchez Andraka  Antonio Mendoza, es un estudiante de secundaria de provincia, cuya formación se va estructurando con base en esas contradicciones, y por lo tanto, llega en sus aspiraciones a identificarse con los millones de mexicanos cuya meta única y definitiva es la adquisición de dinero. La despreocupación de los padres, los maestros sin vocación y los falsos redentores del pueblo y la carencia en hogar y escuela de orientación sexual adecuada, aparecen como culpables de esta producción de mediocres.\n Y volvieron a encenderse las estrellas Juan Sánchez Andraka  Trata sobre dos niños llamados Maria una niña estudiosa, bonita, bien educada y con muchos sentimientos encontrados y su amigo inseparable, que en el libro no dicen su nombre, el siempre ha querido a Maria y sus profundos sentimientos por ella lo hacen hacer cosas a veces inconscientes por ella, ellos viven en el campo y también les afectan los cambios de gobierno, la elección de Carlos Salinas de Gortari del PRI y el fracaso de Cuauhtémoc Cárdenas del PRD.\nEn su pueblo había un señor llamado don Juan, un señor muy preparado, escritor y cuando ellos lo conocen se quedan asombrados por la inmensa capacidad de inteligencia que tiene, poco a poco lo van conociendo.\n La Carreta Bruno Traven  En La carreta, Traven nos transporta a las alejadas comunidades indígenas de Chiapas, en una época donde aún se comerciaba con las personas por medio de intercambios o convenios de partes. Es así como Andrés, el protagonista principal de esta historia, pasa de ser el hijo de una familia de peones, a ser propiedad de un hacendado, luego de un comerciante y finalmente de un comisionista dueño de una compañía de carretas que transportaban productos y mercancías en esa región de Chiapas. Dedicado a la conducción de carretas, en uno de sus viajes conoce a una muchacha indígena, a quien toma bajo su protección.\n "
+},
+{
+	"uri": "https://temocpalma.github.io/about/",
+	"title": "Quién soy",
+	"tags": [],
+	"description": "Acerca de mi",
+	"content": " Presentación Me llamo Cuahuthémoc Palma Gutiérrez, oriundo de Salina Cruz, Oaxaca, vi la luz un 14 de Febrero de 1977.\nSoy programador, aún \u0026ldquo;novato\u0026rdquo;, desde el 2007.\nActualmente trabajo con TechMinds / MakingDevs en un proyecto Grails\nTecnologías           \nPasatiempos e intereses Historia Principalmente Historia de México, y más específicamente que hablen sobre datos poco conocidos de los sucesos, personajes y sitios históricos del país. También me gusta todo lo relacionado a las Guerras Mundiales.\nColeccionista Aficionado Me gusta la numismática, tengo una pequeña colección de monedas y billetes nacionales viejos y recientes, y otra de billetes extranjeros actuales. También me gusta coleccionar juguetes, actualmente tengo una colección de aviones, otra de trailers hotwheels, y recientemente inicié una de Transformers (por ahora con sólo 2 piezas). Pronto pondré una sección donde incluiré fotos de las distintas colecciones.\n"
+},
+{
+	"uri": "https://temocpalma.github.io/books/books_ti/",
+	"title": "TI",
+	"tags": [],
+	"description": "Libros sobre TI",
+	"content": "Los Innovadores: Los genios que inventaron el futuro Walter Isaacson  En esta magistral saga, Isaacson arranca con Ada Lovelace, la hija de lord Byron, una pionera de la programación informática en la década de 1840. Además, presenta a las extraordinarias personas que crearon la revolución digital que nos rodea, gente como Vannevar Bush, Alan Turing, John von Neumann, J.C.R. Licklider, Doug Engelbart, Robert Noyce, Bill Gates, Steve Wozniak, Steve Jobs, Tim Berners-Lee o Larry Page.\nEsta es la historia de cómo funcionan sus cerebros y por qué han sido tan inventivos, pero también de cómo su capacidad para colaborar y dominar el arte del trabajo en equipo les hizo aún más creativos.\n El libro negro del programador Rafael Gómez Blanes  El siglo XXI es el de la sociedad de la información y las nuevas tecnologías: todo ello no sería posible sin la enorme industria del software que le sirve de base.\nNo obstante, los desarrolladores de software no aprovechan todas las oportunidades para desempeñar una carrera profesional de éxito, cometiendo siempre los mismos errores una y otra vez. Un buen proyecto software tiene que ver con habilidades creativas y artísticas más que aquellas necesariamente técnicas.\n Big Data: la revolución de los datos masivos Viktor Mayer-Schonberger, Kenneth Cukier  Un análisis esclarecedor sobre uno de los grandes temas de nuestro tiempo, y sobre el inmenso impacto que tendrá en la economía, la ciencia y la sociedad en general. Los datos masivos representan una revolución que ya está cambiando la forma de hacer negocios, la sanidad, la política, la educación y la innovación.\nDos grandes expertos en la materia analizan qué son los datos masivos, cómo nos pueden cambiar la vida, y qué podemos hacer para defendernos de sus riesgos.\n "
+},
+{
+	"uri": "https://temocpalma.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
