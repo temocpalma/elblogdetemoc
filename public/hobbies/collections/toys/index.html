@@ -1,3 +1,4 @@
+	<head><meta charset="utf-8"></head>
 
 	<link rel="stylesheet" href="/revealjs/css/reveal.css">
 	<link rel="stylesheet" href="/revealjs/css/theme/sky.css" id="theme">
@@ -8,8 +9,7 @@
 	<section data-markdown
 	         data-separator="^---"
 		 data-separator-vertical="^___"
-		 data-separator-notes="^Note:"
-		data-charset="utf8">
+		 data-separator-notes="^Note:">
 	## Legos y similares 
 
 [Ver Album](https://photos.app.goo.gl/exKqqZ09d8hwVX9v2)
@@ -46,7 +46,8 @@ ___
 		          { src: '\/revealjs\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 		          { src: '\/revealjs\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 		          { src: '\/revealjs\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-		          { src: '\/revealjs\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		          { src: '\/revealjs\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/math\/math.js', async: true}
 		        ]
 		      });
 	</script>
