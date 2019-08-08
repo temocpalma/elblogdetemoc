@@ -20,3 +20,9 @@ description = "Libros sobre TI"
 > Un análisis esclarecedor sobre uno de los grandes temas de nuestro tiempo, y sobre el inmenso impacto que tendrá en la economía, la ciencia y la sociedad en general. Los datos masivos representan una revolución que ya está cambiando la forma de hacer negocios, la sanidad, la política, la educación y la innovación.
 
 > Dos grandes expertos en la materia analizan qué son los datos masivos, cómo nos pueden cambiar la vida, y qué podemos hacer para defendernos de sus riesgos.
+
+<h4>La Red de Todo: Internet de las Cosas y el futuro de la economía conectada <small>Andrei Vazhnov</h4>
+
+> Internet de las Cosas es un cambio en la naturaleza de los productos cuya magnitud es difícil de comprender por completo y las empresas de tecnología están compitiendo entre sí con pronósticos que, a veces, parecen exagerados. Ericsson promete 50 mil millones de dispositivos conectados a la red en el año 2020, más de 7 por cada persona del mundo; General Electric predice que Internet Industrial añadirá 15 trillones de dólares al PBI mundial en los próximos 20 años, un importe similar al actual PBI.
+
+
