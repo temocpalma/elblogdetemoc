@@ -11,9 +11,8 @@ Me llamo *Cuahuthémoc Palma Gutiérrez*, oriundo de *Salina Cruz, Oaxaca*, vi l
 
 Soy programador, aún "novato", desde el 2007.
 
-Actualmente trabajo con [TechMinds](http://techminds.com.mx/) / [MakingDevs](http://makingdevs.com/) en un proyecto [Grails](https://grails.org/)
+Actualmente trabajo con [MakingDevs](http://makingdevs.com/)
 
-![TechMinds](/img/techmindslogo.png?width=400px&classes=border,shadow)
 ![MakingDevs](/img/mkdevslogo.png?width=180px&classes=border,shadow)
 
 ## Tecnologías
