@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on El Blog de Temoc</title>
+    <link>https://temocpalma.github.io/posts/</link>
+    <description>Recent content in Posts on El Blog de Temoc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://temocpalma.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creación del blog</title>
+      <link>https://temocpalma.github.io/posts/creating-my-blog-with-hugo/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://temocpalma.github.io/posts/creating-my-blog-with-hugo/</guid>
+      <description>&lt;h2 id=&#34;historia-de-la-creación-del-blog&#34;&gt;Historia de la creación del blog&lt;/h2&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

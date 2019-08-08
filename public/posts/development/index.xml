@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programación on El Blog de Temoc</title>
+    <link>https://temocpalma.github.io/posts/development/</link>
+    <description>Recent content in Programación on El Blog de Temoc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://temocpalma.github.io/posts/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creación de Pruebas Unitarias con Spock y Groovy</title>
+      <link>https://temocpalma.github.io/posts/development/using-spock-with-unit-test-on-groovy/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://temocpalma.github.io/posts/development/using-spock-with-unit-test-on-groovy/</guid>
+      <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
