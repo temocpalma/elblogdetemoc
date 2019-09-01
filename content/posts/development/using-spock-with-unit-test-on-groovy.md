@@ -6,9 +6,11 @@ weight = 1
 date = "2017-09-07"
 +++
 
+*07-09-2017*
+
 ## Introducción
 <!--more-->
-Las creación de pruebas automatizadas de software son una tarea aún poco apreciada en el desarrollo de software, ya que muchos las consideran un trabajo "extra" no necesario de realizar, principalmente cuando el programador tiene ya dominio en la solución de problemas en el lenguaje en el que se desenvuelva; ya que muchas veces se escribe más código en las pruebas que en el componente que se está probando.
+La creación de pruebas automatizadas de software son una tarea aún poco apreciada en el desarrollo de software, ya que muchos lo consideran un trabajo "extra" no necesario de realizar, principalmente cuando el programador tiene ya dominio en la solución de problemas en el lenguaje en el que se desenvuelva; ya que muchas veces se escribe más código en las pruebas que en el componente que se está probando.
 
 Sin embargo, esa forma de pensamiento, es equivocada. Las pruebas automatizadas son una herramienta que no sólo nos ayuda a garantizar en gran medida que el componente de software desarrollado funcione bien (que hace lo que tiene que hacer) sino que además nos ayuda a mejorar las buenas prácticas a la hora de programar (escribimos mejor código usando pruebas).
 
