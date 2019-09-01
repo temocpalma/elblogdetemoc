@@ -6,6 +6,8 @@ weight = 1
 date = "2017-09-07"
 +++
 
+*07-09-2017*
+
 ## Historia de la creación del blog
 <!--more-->
 En este post quiero contarles acerca de la experiencia que tuve creando este blog.
