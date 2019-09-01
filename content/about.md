@@ -11,40 +11,28 @@ Me llamo *Cuahuthémoc Palma Gutiérrez*, oriundo de *Salina Cruz, Oaxaca*, vi l
 
 Soy programador, aún "novato", desde el 2007.
 
-Actualmente trabajo con [MakingDevs](http://makingdevs.com/)
-
-![MakingDevs](/img/mkdevslogo.png?width=180px&classes=border,shadow)
-
 ## Tecnologías
 
-<div class="row">
-  <div class="col-md-3 text-center">
-    <img src="/img/spring.png" width="200" title="Spring Framework"/>
-  </div>
-  <div class="col-md-3 text-center">
-    <img src="/img/groovy.png" width="200" title="Groovy"/>
-  </div>
-  <div class="col-md-3 text-center">
-    <img src="/img/grails.png" width="200" title="Grails"/>
-  </div>
-  <div class="col-md-3 text-center">
-    <img src="/img/gradle.png" width="200" title="Gradle"/>
-  </div>
-</div>
-<br/>
-<div class="row">
-  <div class="col-md-4 text-center">
-    <img src="/img/git.png" width="200" title="Git"/>
-  </div>
-  <div class="col-md-4 text-center">
-    <img src="/img/github.png" width="200" title="Github"/>
-  </div>
-  <div class="col-md-4 text-center">
-    <img src="/img/jenkins.png" width="200" title="Jenkins"/>
-  </div>
-</div>
-
-<br/>
+<table>
+	<tr>
+		<td><img src="/img/spring.png" width="100" title="Spring Framework"/></td>
+		<td><img src="/img/groovy.png" width="100" title="Groovy"/></td>
+		<td><img src="/img/grails.png" width="100" title="Grails"/></td>
+		<td><img src="/img/gradle.png" width="100" title="Gradle"/></td>
+	</tr>
+	<tr>
+		<td><img src="/img/git.png" width="100" title="Git"/></td>
+		<td><img src="/img/github.png" width="100" title="Github"/></td>
+		<td><img src="/img/jenkins.png" width="100" title="Jenkins"/></td>
+		<td><img src="/img/rails.png" width="100" title="Rails"/></td>
+	</tr>
+	<tr>
+		<td><img src="/img/react.png" width="100" title="React"/></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
 
 ## Pasatiempos e intereses
 
