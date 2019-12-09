@@ -1,4 +1,1 @@
-[submodule "public"]
-	path = public
-	url = git@github.com:temocpalma/temocpalma.github.io.git
-	branch = master
+
