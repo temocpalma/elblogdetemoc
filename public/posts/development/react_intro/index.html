@@ -1,0 +1,301 @@
+	<head><meta charset="utf-8"></head>
+
+	<link rel="stylesheet" href="/revealjs/css/reveal.css">
+	<link rel="stylesheet" href="/revealjs/css/theme/sky.css" id="theme">
+	<link rel="stylesheet" href="/revealjs/lib/css/zenburn.css">
+
+	<div class="reveal">
+	<div class="slides">
+	<section data-markdown
+	         data-separator="^---"
+		 data-separator-vertical="^___"
+		 data-separator-notes="^Note:">
+	
+### React JS
+
+* Library JS: 
+
+    &lt;small&gt;SPA&#39;s&lt;/small&gt;
+
+	 &lt;small&gt; Created by Facebook&lt;/small&gt;
+
+* Components:
+   
+    &lt;small&gt;encapsulate, re-use&lt;/small&gt;
+
+	 &lt;small&gt;presentation: JSX, css&lt;/small&gt;
+
+	 &lt;small&gt;logic: ECS6, state managment &lt;/small&gt;
+
+___
+
+### Making a react app
+
+* Pre-requisites: node
+
+* Install create-react-app:
+```
+npm install -g create-react-app     
+```
+
+* Create the app:
+```
+create-react-app blog-app
+```
+   &lt;small&gt;*You must replace &#34;blog-app&#34; by your own app name*&lt;/small&gt;
+
+___
+
+### Making first app (part 2)
+
+* Start the app: 
+
+   &lt;small&gt;Change into folder &#34;blog-app&#34; and execute next command&lt;/small&gt;
+```
+npm start
+```
+
+   &lt;small&gt;To stop the app just press *Ctrl &#43; C*&lt;/small&gt;
+
+___
+
+### Application Structure
+
+&lt;img src=&#34;/img/react/app_structure.png&#34; width=&#34;650&#34; height=&#34;450&#34; title=&#34;App Structure&#34; /&gt;
+___
+
+### Application Structure (part 2)
+
+* **node_modules:** project dependencies
+
+* **public:** main html file
+
+* **src:** components, css, index.js
+
+* **package.json:** project dependencies declaration
+___
+
+### JSX = JavaScript XML
+
+* Syntax to build the component markup
+
+* It is transformed into javascript
+
+* It can to be assigned into variables, or return in functions
+```
+const elem = &lt;p&gt;Paragraph text&lt;/p&gt;;
+```
+   * Must be a single element:
+   ```
+   const elem = (
+      &lt;div&gt;
+         &lt;span&gt;Field:&lt;/span&gt;
+         &lt;input type=&#34;text&#34; /&gt;
+      &lt;/div&gt;
+   );
+   ```
+___
+
+### JSX (part 2) 
+
+* It&#39;s like HTML with this differences:
+
+   * **camelCase** naming instead of HTML attribute names
+      * **className** instead of *class*, **tabIndex** instead of *tabindex*
+      ``` 
+      &lt;div className=&#34;primary&#34;&gt; 
+      ```
+
+   * must close tags explicity
+   ```
+   &lt;input type=&#34;text&#34;&gt;&lt;/input&gt;
+   &lt;img src=&#34;...&#34; /&gt;
+   ```
+___
+
+### JSX (part 3) 
+
+* You can use js code along with JSX:
+``` 
+render() {
+   const style = &#39;info&#39;;
+   const title = &#39;React JS&#39;;
+
+   return (
+      &lt;div className={style}&gt;
+         {title}
+      &lt;/div&gt;
+   ); 
+}
+```
+___
+
+### JSX (part 4) 
+
+* Ternary operator instead of *if...else*:
+``` 
+&lt;div&gt;
+   {condition ? &lt;h1&gt;&lt;/h1&gt; : null}
+&lt;/div&gt;
+```
+
+* Display arrays:
+```
+render() {
+   const fruits = [&#34;orange&#34;, &#34;apple&#34;, &#34;banana&#34;];
+   return (
+      &lt;ul&gt;
+         {fruits.map(fruit =&gt;
+            &lt;li&gt;{fruit}&lt;/li&gt;
+         )}
+      &lt;/ul&gt;
+   );
+}
+```
+___
+
+### Components
+
+* UI piece: separate, reusable, isolated
+* Declaration:
+   * Like a function:
+   ``` 
+   const FunctionComponent = () =&gt; {
+      return &lt;h1&gt;Function Component&lt;/h1&gt;;
+   }
+   ```
+
+   * Like a class (must contains **render** method):
+   ```
+   class ClassComponent extends Component {
+      render() {
+         return &lt;h1&gt;Class Component&lt;/h1&gt;;
+      }
+   }
+   ```
+___
+
+### Components (part 2)
+
+* Create a component:
+   * Create a file with same component name. For instance, write this code in a file with name *Title*, because component name is *Title*:
+   ``` 
+   import React, { Component } from &#34;react&#34;;
+
+   class Title extends Component {
+      render() {
+         return &lt;h1&gt;Title Component&lt;/h1&gt;;
+      }
+   }
+
+   export default Title;
+   ```
+   &lt;small&gt;Note: **You must export the component**&lt;/small&gt;
+___
+
+### Components (part 3)
+
+* Use a component:
+   * For use the component created previously and supossing that its file is in same directory where is App component (*src* directory):
+   ``` 
+   import React, { Component } from &#34;react&#34;;
+   import Title from &#34;./Title&#34;;
+
+   class App extends Component {
+      render() {
+         return (
+            &lt;Title /&gt;
+         );
+      }
+   }
+   ```
+___
+
+### Components (part 4)
+
+* Communication between components
+   * they be pass into the component with attributes:
+   ```
+   class App extends Component {
+
+      const userName = &#34;Temoc&#34;;
+
+      render() {
+         return (
+            &lt;Title userName={userName}/&gt;
+         );
+      }
+   }
+   ```
+___
+
+### Components (part 5)
+
+* Communication between components (continuation)
+   * &lt;span style=&#34;color: tomato&#34;&gt;**props**&lt;/span&gt; object receive attributes values
+   * when is a class component:
+   ```
+   class Title extends Component {
+      constructor(props) {
+         super(props);
+      }
+
+      render() {
+         return (
+            &lt;div&gt;
+               &lt;h1&gt;Title Component&lt;/h1&gt;
+               &lt;h2&gt;{this.props.userName}&lt;/h2&gt;
+            &lt;/div&gt;
+         );
+      }
+   }
+   ```
+___
+
+### Components (part 6)
+
+* Communication between components (continuation)
+   * when is a function component:
+   ```
+   const Title = (props) =&gt; {
+      return &lt;h1&gt;Title Component ({props.userName})&lt;/h1&gt;;
+   }
+   ```
+___
+
+
+[Cerrar](/posts/development)
+
+	</section>
+	</div>
+	</div>
+	<script src="/revealjs/lib/js/head.min.js"></script>
+	<script src="/revealjs/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+		      	embedded : true,
+
+		        
+		        "center": true ,
+		        
+		        "controls": true ,
+		        
+		        "history": true ,
+		        
+		        "progress": true ,
+		        
+		        "transition":"concave",
+		        
+		        
+		        
+		        dependencies: [
+		          { src: '\/revealjs\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: '\/revealjs\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/math\/math.js', async: true}
+		        ]
+		      });
+	</script>
