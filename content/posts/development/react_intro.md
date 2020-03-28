@@ -103,10 +103,11 @@ ___
 
 * It's like HTML with this differences:
 
-   * **className** instead of *class*
-   ``` 
-   <div className="primary"> 
-   ```
+   * **camelCase** naming instead of HTML attribute names
+      * **className** instead of *class*, **tabIndex** instead of *tabindex*
+      ``` 
+      <div className="primary"> 
+      ```
 
    * must close tags explicity
    ```
@@ -155,4 +156,115 @@ render() {
 }
 ```
 ___
+
+### Components
+
+* UI piece: separate, reusable, isolated
+* Declaration:
+   * Like a function:
+   ``` 
+   const FunctionComponent = () => {
+      return <h1>Function Component</h1>;
+   }
+   ```
+
+   * Like a class (must contains **render** method):
+   ```
+   class ClassComponent extends Component {
+      render() {
+         return <h1>Class Component</h1>;
+      }
+   }
+   ```
+___
+
+### Components (part 2)
+
+* Create a component:
+   * Create a file with same component name. For instance, write this code in a file with name *Title*, because component name is *Title*:
+   ``` 
+   import React, { Component } from "react";
+
+   class Title extends Component {
+      render() {
+         return <h1>Title Component</h1>;
+      }
+   }
+
+   export default Title;
+   ```
+   <small>Note: **You must export the component**</small>
+___
+
+### Components (part 3)
+
+* Use a component:
+   * For use the component created previously and supossing that its file is in same directory where is App component (*src* directory):
+   ``` 
+   import React, { Component } from "react";
+   import Title from "./Title";
+
+   class App extends Component {
+      render() {
+         return (
+            <Title />
+         );
+      }
+   }
+   ```
+___
+
+### Components (part 4)
+
+* Communication between components
+   * they be pass into the component with attributes:
+   ```
+   class App extends Component {
+
+      const userName = "Temoc";
+
+      render() {
+         return (
+            <Title userName={userName}/>
+         );
+      }
+   }
+   ```
+___
+
+### Components (part 5)
+
+* Communication between components (continuation)
+   * <span style="color: tomato">**props**</span> object receive attributes values
+   * when is a class component:
+   ```
+   class Title extends Component {
+      constructor(props) {
+         super(props);
+      }
+
+      render() {
+         return (
+            <div>
+               <h1>Title Component</h1>
+               <h2>{this.props.userName}</h2>
+            </div>
+         );
+      }
+   }
+   ```
+___
+
+### Components (part 6)
+
+* Communication between components (continuation)
+   * when is a function component:
+   ```
+   const Title = (props) => {
+      return <h1>Title Component ({props.userName})</h1>;
+   }
+   ```
+___
+
+
 [Cerrar](/posts/development)
