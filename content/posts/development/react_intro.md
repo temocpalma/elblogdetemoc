@@ -16,14 +16,14 @@ center= true
 
 ### React JS
 
-* Library JS: 
+* Library JS:
 
     <small>SPA's</small>
 
 	 <small> Created by Facebook</small>
 
 * Components:
-   
+
     <small>encapsulate, re-use</small>
 
 	 <small>presentation: JSX, css</small>
@@ -38,7 +38,7 @@ ___
 
 * Install create-react-app:
 ```
-npm install -g create-react-app     
+npm install -g create-react-app
 ```
 
 * Create the app:
@@ -51,7 +51,7 @@ ___
 
 ### Making first app (part 2)
 
-* Start the app: 
+* Start the app:
 
    <small>Change into folder "blog-app" and execute next command</small>
 ```
@@ -99,14 +99,14 @@ const elem = <p>Paragraph text</p>;
    ```
 ___
 
-### JSX (part 2) 
+### JSX (part 2)
 
 * It's like HTML with this differences:
 
    * **camelCase** naming instead of HTML attribute names
       * **className** instead of *class*, **tabIndex** instead of *tabindex*
-      ``` 
-      <div className="primary"> 
+      ```
+      <div className="primary">
       ```
 
    * must close tags explicity
@@ -116,10 +116,10 @@ ___
    ```
 ___
 
-### JSX (part 3) 
+### JSX (part 3)
 
 * You can use js code along with JSX:
-``` 
+```
 render() {
    const style = 'info';
    const title = 'React JS';
@@ -128,15 +128,15 @@ render() {
       <div className={style}>
          {title}
       </div>
-   ); 
+   );
 }
 ```
 ___
 
-### JSX (part 4) 
+### JSX (part 4)
 
 * Ternary operator instead of *if...else*:
-``` 
+```
 <div>
    {condition ? <h1></h1> : null}
 </div>
@@ -162,7 +162,7 @@ ___
 * UI piece: separate, reusable, isolated
 * Declaration:
    * Like a function:
-   ``` 
+   ```
    const FunctionComponent = () => {
       return <h1>Function Component</h1>;
    }
@@ -182,7 +182,7 @@ ___
 
 * Create a component:
    * Create a file with same component name. For instance, write this code in a file with name *Title*, because component name is *Title*:
-   ``` 
+   ```
    import React, { Component } from "react";
 
    class Title extends Component {
@@ -200,7 +200,7 @@ ___
 
 * Use a component:
    * For use the component created previously and supossing that its file is in same directory where is App component (*src* directory):
-   ``` 
+   ```
    import React, { Component } from "react";
    import Title from "./Title";
 
@@ -308,6 +308,16 @@ updateState() {
    });
 }
 ```
+___
+
+### What else...
+
+* Component lifecycle methods
+* Http requests: Axios
+* Testing: Jest, Enzyme
+* Global state: Redux
+* Error handler: ErrorBoundary
+
 ___
 
 
