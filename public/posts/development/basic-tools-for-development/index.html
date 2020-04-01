@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>El Blog de Temoc</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2020-03-31T21:05:08 CST">
+<title>Herramientas básicas para desarrollo de software :: El Blog de Temoc</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+<meta name="description" content="">
+
+
+    
+  </head>
+  <body data-url="/posts/development/basic-tools-for-development/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+      
+	
+  
+    <p>EL BLOG DE TEMOC</p>
+
+  
+
+
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fa fa-close"></i></span>
+		</div>
+		<script type="text/javascript" src="/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "https:\/\/temocpalma.github.io\/";
+        
+		</script>
+		<script type="text/javascript" src="/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="https://temocpalma.github.io/posts/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/posts/">Posts</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="https://temocpalma.github.io/posts/development/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/posts/development/">Programación</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://temocpalma.github.io/posts/development/using-spock-with-unit-test-on-groovy/" class="dd-item">
+        <div>
+          <a href="/posts/development/using-spock-with-unit-test-on-groovy/">
+            <i class='fa fa-anchor'></i> Creación de Pruebas Unitarias con Spock y Groovy
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://temocpalma.github.io/posts/development/basic-tools-for-development/" class="dd-item active">
+        <div>
+          <a href="/posts/development/basic-tools-for-development/">
+            <i class='fa fa-anchor'></i> Herramientas básicas para desarrollo de software
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://temocpalma.github.io/posts/development/react_intro/" class="dd-item">
+        <div>
+          <a href="/posts/development/react_intro/">
+            <i class='fa fa-anchor'></i> Introducción a React JS
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="https://temocpalma.github.io/posts/creating-my-blog-with-hugo/" class="dd-item">
+        <div>
+          <a href="/posts/creating-my-blog-with-hugo/">
+            <i class='fa fa-anchor'></i> Creación del blog
+          </a>
+        </div>
+    </li>
+    <li data-nav-id="https://temocpalma.github.io/posts/tricks/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/posts/tricks/">Trucos</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://temocpalma.github.io/posts/tricks/clean-install-high-sierra-mac-os/" class="dd-item">
+        <div>
+          <a href="/posts/tricks/clean-install-high-sierra-mac-os/">
+            <i class='fa fa-anchor'></i> Instalación limpia de MacOs High Sierra
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://temocpalma.github.io/posts/history/" class="dd-item
+        ">
+      <div>
+      <a href="/posts/history/">Historia</a>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://temocpalma.github.io/hobbies/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/hobbies/">Hobbies</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="https://temocpalma.github.io/hobbies/collections/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/hobbies/collections/">Colecciones</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://temocpalma.github.io/hobbies/collections/national_bills/" class="dd-item">
+        <div>
+          <a href="/hobbies/collections/national_bills/">
+            <i class='fa fa-anchor'></i> Billetes Nacionales
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://temocpalma.github.io/hobbies/collections/toys/" class="dd-item">
+        <div>
+          <a href="/hobbies/collections/toys/">
+            <i class='fa fa-anchor'></i> Juguetes
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://temocpalma.github.io/hobbies/travels/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/hobbies/travels/">Viajes</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://temocpalma.github.io/hobbies/travels/oaxaca/" class="dd-item">
+        <div>
+          <a href="/hobbies/travels/oaxaca/">
+            <i class='fa fa-anchor'></i> Oaxaca
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="https://temocpalma.github.io/books/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/books/">Books</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="https://temocpalma.github.io/books/books_science/" class="dd-item">
+        <div>
+          <a href="/books/books_science/">
+            Ciencia
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://temocpalma.github.io/books/books_scifi/" class="dd-item">
+        <div>
+          <a href="/books/books_scifi/">
+            Ciencia Ficción
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://temocpalma.github.io/books/books_history/" class="dd-item">
+        <div>
+          <a href="/books/books_history/">
+            Historia
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://temocpalma.github.io/books/books_novels/" class="dd-item">
+        <div>
+          <a href="/books/books_novels/">
+            Novelas
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="https://temocpalma.github.io/books/books_ti/" class="dd-item">
+        <div>
+          <a href="/books/books_ti/">
+            TI
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><a href="/about" target="_blank" rel="noopener"><i class='fa fa-user-circle'></i> Quién soy...</a></li>
+                <li class="" role=""><a href="/socialnet" target="_blank" rel="noopener"><i class='fa fa-address-book'></i> Sígueme</a></li>
+        </section>
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+
+
+
+ <a href='https://temocpalma.github.io/'></a> > <a href='https://temocpalma.github.io/posts/'>Posts</a> > <a href='https://temocpalma.github.io/posts/development/'>Programación</a> > Herramientas básicas para desarrollo de software
+
+ 
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introducción">Introducción</a></li>
+    <li><a href="#las-herramientas">Las herramientas</a></li>
+    <li><a href="#otros-aspectos">Otros aspectos</a></li>
+  </ul>
+</nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+<div id="body-inner">
+  
+    <h1>Herramientas básicas para desarrollo de software</h1>
+  
+
+
+
+    
+    
+    
+    <p><em>10-08-2019</em></p>
+<h2 id="introducción">Introducción</h2>
+<p>Desde hace poco más de tres años empecé a conocer varias herramientas que considero son básicas para todos los que nos dedicamos a este &ldquo;oficio&rdquo;.</p>
+<p>El motivo de enlistarlas en este post, es para aquellos que (como yo en su momento) no saben que existen dichas herramientas y que (por experiencia propia) te facilitan muchísimo el trabajo como programador.</p>
+<p>No es el fin de este post ser un tutorial de cómo instalarlas o usar estas herramientas, pero sí daré una breve descripción personal de ellas.</p>
+<h2 id="las-herramientas">Las herramientas</h2>
+<ul>
+<li>
+<p><strong>Git.</strong> Para mi, una de las maravillas del mundo del desarrollo de software. Git es un sistema de control de versiones, nos ayuda a controlar los cambios que hagamos sobre un proyecto, a controlar el proceso de desarrollo colaborativo (combinado con una herramienta web como GitHub, GitLab o BitBucket). Es también una herramienta clave para implementar <em>Integración Continua/Entrega Continua</em>. La <a href="https://git-scm.com/book/es/v1/Empezando">documentación</a> online para mi fue suficiente y clara para usarlo básicamente, por lo que la recomiendo para quienes esto es algo nuevo.</p>
+</li>
+<li>
+<p><strong>Editor de textos.</strong> Hubo un tiempo en que usaba IDE's para programar (NetBeans, MS Visual Studio), y en ese entonces mi opinión era muy buena de los IDE's, sigo diciendo que son buenas herramientas, pero ahora que he estado programando sólo con Editores de texto, no los he extrañado para nada, y hasta pienso que se me complicaría regresar a usarlos :)</p>
+<p>¿Por qué pienso eso? Si lo tengo que decir en pocas palabras, diré que es por la gran facilidad que los editores de texto te dan a la hora de escribir código, evitas esa pequeña espera que los IDE's tienen al abrilos, evitas algunas configuraciones e instalación de plugins que son medio engorrosos. Por otro lado, pierdes la ayuda de sintaxis y tal vez autocompletado y autoimportaciones, pero esto no ha sido tan imprescindible, al menos en mi caso.</p>
+<p>¿Qué editores recomiendo?</p>
+<p><em>Vim</em>, es el que más tiempo he utilizado, tal vez al principio da la impresión de que es complicado su uso por los comandos que son distintos a los que estamos acostumbrados para la edición de textos y por la forma en que se manipulan estos textos (prácticamente todo se hace con el teclado, te olvidas que existe el mouse), pero nada que con la práctica no se pueda cubrir. Además hay muchos plugins que se le pueden agregar muy fácilmente para mejorar la experiencia, en particular yo uso el gestor de paquetes <a href="https://github.com/tpope/vim-pathogen">Pathogen</a> para instalarlos.</p>
+<p><em>Sublime</em> es otro editor que también uso de vez en cuando, es muy ligero y bastante intuitivo, por default ya trae varios plugins que te ayudan en la escritura de código y la edición de texto es más parecida a las usadas en las procesadores de texto populares, y acá sí le puedes dar uso al mouse para realizar tareas.</p>
+<p><em>Visual Studio Code</em>. Este editor es el que he estado usando desde hace algunos meses, con un proyecto en React, y aunque es más pesado que los anteriores, creo que es una buena opción también. Al igual que sublime, la edición de texto es similar a la forma de los procesadores de texto populares. Además trae una terminal de línea de comandos integrada, que te ayuda a ejecutar algunas tareas sin necesidad de abrir la terminal propia del sistema operativo.</p>
+</li>
+<li>
+<p><strong>Administradores de versiones.</strong></p>
+<p>Cuando te toca trabajar en varios proyectos de desarrollo en períodos de tiempo no tan largos, es muy probable que entre ellos tengas que usar distintas versiones de los lenguajes y herramientas de programación. Es en este caso donde se hacen bastante útiles los gestores de versiones para poder cambiar fácilmente entre las que necesites en un determinado momento.</p>
+<p>Los gestores que he usados son: <strong>sdkman</strong> para gestionar versiones de herramientas de programación para la JVM (java, groovy, gradle, maven, grails); <strong>rvm</strong> para versiones de ruby; y <strong>nvm</strong> para versiones de node.</p>
+</li>
+<li>
+<p><strong>Terminal.</strong></p>
+<p>Por último, considero que el uso de la Terminal de línea de comandos es básico para el desarrollo de software. Con ella además de ayudarte a ejecutar operaciones de manejo de archivos del SO y a instalar herramientas en el sistema, también te ayuda bastante a realizar tareas propias del desarrollo, como ejecutar scripts de código, &ldquo;levantar&rdquo; un proyecto, monitorear logs de una aplicación, conectarte a servidores remotos por ssh, listar y eliminar procesos del sistema operativo, ejecutar comandos de git, consumir webservices con curl, entre otras.</p>
+<p>En Linux o Mac, el uso de la terminal para las tareas mencionados es bastante común, y puedes usar la terminal con la shell que por defecto viene (bash), pero recomiendo cambiarla a <strong>ZShell</strong> porque te permite personalizar, a través de temas, la forma en que se muestran cosas en la terminal (como el propmt, información de la barra de estado, estatus del repositorio git).</p>
+<p>Otra herramienta bastante útil para la terminal es <strong>Tmux</strong>, que te permite tener varias &ldquo;pestañas&rdquo; dentro de una misma ventana de la terminal,lo que te evita abrir varias ventanas de ella. Esto te da la posibilidad de que dividas la pantalla en varias secciones y así, por ejemplo, puedas monitorear un log de una aplicación en una de ellas, en otra, ejecutes algún script, en otra veas la salida en consola de otra aplicación, o muestres los procesos y uso de la memoria y los procesadores (htop).</p>
+</li>
+</ul>
+<h2 id="otros-aspectos">Otros aspectos</h2>
+<p>Para terminar con este post, mencionaré algunas cosas más que no son propiamente herramientas de desarrollo, pero que definitivamente te ayudarán a hacer el trabajo de una forma más cómoda y a gusto.</p>
+<p>Si trabajas con una laptop (como es mi caso), te recomiendo uses una base, con ella elevarás la pantalla y te ayudará a conservar una mejor posición mientras escribes código. Esto te implicará usar un teclado y mouse externos para trabajar.</p>
+<p>Monitor adicional. Ya sea que trabajes con una PC o una laptop, tener un monitor adicional te facilitará mucho el trabajo de codificación, al poder tener a la vista más información relacionada con tu proyecto sin tener que estar cambiándote de una ventana a otra. Considero que un tamaño de 19 pulgados del monitor extra es muy bueno.</p>
+<p>Silla cómoda. Generalmente cuando estamos desarrollando pasamos bastante tiempo sentados, por lo que la silla que usemos para ello debería ser lo suficientemente cómoda. Te evitará malas posturas que puedan ocasionarte cansancio en hombros o espalda. Aún teniendo una buena silla, en particular, procuro no estar sentado más de 2 horas continuas y tomarme descansos de unos minutos para caminar y estirarme un poco.</p>
+
+    
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+<a class="nav nav-prev" href="/posts/development/using-spock-with-unit-test-on-groovy/" title="Creación de Pruebas Unitarias con Spock y Groovy"> <i class="fa fa-chevron-left"></i><label>Creación de Pruebas Unitarias con Spock y Groovy</label></a>
+    <a class="nav nav-next" href="/posts/development/react_intro/" title="Introducción a React JS" style="margin-right: 0px;"><label>Introducción a React JS</label><i class="fa fa-chevron-right"></i></a></div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
