@@ -310,5 +310,15 @@ updateState() {
 ```
 ___
 
+### What else...
+
+* Component lifecycle methods
+* Http requests: Axios
+* Testing: Jest, Enzyme
+* Global state: Redux
+* Error handler: ErrorBoundary
+
+___
+
 
 [Cerrar](/posts/development)
