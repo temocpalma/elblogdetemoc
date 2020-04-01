@@ -266,5 +266,59 @@ ___
    ```
 ___
 
+### Component State
+
+* Object that stores component information
+
+* Only with class components
+
+* When it is updated, the component is re-rendered
+
+* It is local, encapsulated
+
+___
+
+### Component State (part 2)
+
+* It is initialized in constructor
+```
+class Example extends Component {
+   constructor(props) {
+      super(props);
+
+      this.state = {
+         key1: "value1",
+         key2: 100,
+         key3: ["a", "b", "c"]
+      }
+   }
+}
+```
+___
+
+### Component State (part 3)
+
+* It is updated with **setState** method
+
+```
+updateState() {
+   const new_count = this.state.counter + 1;
+   this.setState({
+      counter: new_count
+   });
+}
+```
+___
+
+### What else...
+
+* Component lifecycle methods
+* Http requests: Axios
+* Testing: Jest, Enzyme
+* Global state: Redux
+* Error handler: ErrorBoundary
+
+___
+
 
 [Cerrar](/posts/development)
