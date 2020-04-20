@@ -3,7 +3,7 @@ title = "Flutter Intro"
 type="slide"
 pre ="<i class='fa fa-anchor'></i> "
 weight = 4
-date = "2020-04-06"
+date = "2020-04-20"
 
 theme = "sky"
 [revealOptions]
