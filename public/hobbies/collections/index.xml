@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Colecciones on El Blog de Temoc</title>
@@ -17,8 +17,8 @@
       
       <guid>https://temocpalma.github.io/hobbies/collections/national_bills/</guid>
       <description>American Bank Note Company Ver Album
- Banco de México SA Ver Album
- Banco de México  Recientes  Cerrar</description>
+Banco de México SA Ver Album
+Banco de México Recientes Cerrar</description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@
       
       <guid>https://temocpalma.github.io/hobbies/collections/toys/</guid>
       <description>Legos y similares Ver Album
- Cerrar</description>
+Cerrar</description>
     </item>
     
   </channel>

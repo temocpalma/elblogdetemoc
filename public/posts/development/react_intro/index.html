@@ -13,14 +13,14 @@
 	
 ### React JS
 
-* Library JS: 
+* Library JS:
 
     &lt;small&gt;SPA&#39;s&lt;/small&gt;
 
 	 &lt;small&gt; Created by Facebook&lt;/small&gt;
 
 * Components:
-   
+
     &lt;small&gt;encapsulate, re-use&lt;/small&gt;
 
 	 &lt;small&gt;presentation: JSX, css&lt;/small&gt;
@@ -35,7 +35,7 @@ ___
 
 * Install create-react-app:
 ```
-npm install -g create-react-app     
+npm install -g create-react-app
 ```
 
 * Create the app:
@@ -48,7 +48,7 @@ ___
 
 ### Making first app (part 2)
 
-* Start the app: 
+* Start the app:
 
    &lt;small&gt;Change into folder &#34;blog-app&#34; and execute next command&lt;/small&gt;
 ```
@@ -96,14 +96,14 @@ const elem = &lt;p&gt;Paragraph text&lt;/p&gt;;
    ```
 ___
 
-### JSX (part 2) 
+### JSX (part 2)
 
 * It&#39;s like HTML with this differences:
 
    * **camelCase** naming instead of HTML attribute names
       * **className** instead of *class*, **tabIndex** instead of *tabindex*
-      ``` 
-      &lt;div className=&#34;primary&#34;&gt; 
+      ```
+      &lt;div className=&#34;primary&#34;&gt;
       ```
 
    * must close tags explicity
@@ -113,10 +113,10 @@ ___
    ```
 ___
 
-### JSX (part 3) 
+### JSX (part 3)
 
 * You can use js code along with JSX:
-``` 
+```
 render() {
    const style = &#39;info&#39;;
    const title = &#39;React JS&#39;;
@@ -125,15 +125,15 @@ render() {
       &lt;div className={style}&gt;
          {title}
       &lt;/div&gt;
-   ); 
+   );
 }
 ```
 ___
 
-### JSX (part 4) 
+### JSX (part 4)
 
 * Ternary operator instead of *if...else*:
-``` 
+```
 &lt;div&gt;
    {condition ? &lt;h1&gt;&lt;/h1&gt; : null}
 &lt;/div&gt;
@@ -159,7 +159,7 @@ ___
 * UI piece: separate, reusable, isolated
 * Declaration:
    * Like a function:
-   ``` 
+   ```
    const FunctionComponent = () =&gt; {
       return &lt;h1&gt;Function Component&lt;/h1&gt;;
    }
@@ -179,7 +179,7 @@ ___
 
 * Create a component:
    * Create a file with same component name. For instance, write this code in a file with name *Title*, because component name is *Title*:
-   ``` 
+   ```
    import React, { Component } from &#34;react&#34;;
 
    class Title extends Component {
@@ -197,7 +197,7 @@ ___
 
 * Use a component:
    * For use the component created previously and supossing that its file is in same directory where is App component (*src* directory):
-   ``` 
+   ```
    import React, { Component } from &#34;react&#34;;
    import Title from &#34;./Title&#34;;
 

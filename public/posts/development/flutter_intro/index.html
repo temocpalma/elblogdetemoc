@@ -1,0 +1,133 @@
+	<head><meta charset="utf-8"></head>
+
+	<link rel="stylesheet" href="/revealjs/css/reveal.css">
+	<link rel="stylesheet" href="/revealjs/css/theme/sky.css" id="theme">
+	<link rel="stylesheet" href="/revealjs/lib/css/zenburn.css">
+
+	<div class="reveal">
+	<div class="slides">
+	<section data-markdown
+	         data-separator="^---"
+		 data-separator-vertical="^___"
+		 data-separator-notes="^Note:">
+	
+### Basic Concepts
+
+* Multiplataform Mobile Apps Development SDK
+
+* Created by Google
+
+* Dart Language
+   - Created like option to javascript
+   - It is compiled into native ARM code
+
+___
+
+### Basic Concepts (part 2)
+
+* Own render engine
+   - Skia based
+   - Own great widget library
+   - No longer version problems
+
+* Official development framework for Fucshia
+
+___
+
+### Install Flutter
+
+* Download SDK
+* Extract file in a location
+* Add tool to your path
+* Run flutter doctor
+   - Check output and perform the tasks for finish setup
+      - Set up an editor (Android Studio, Xcode, Visual Studio Code)
+
+[Install guide](https://flutter.dev/docs/get-started/install)
+
+___
+
+### Widgets
+
+* All in flutter is a widget
+* Apps are made up of a widget tree
+* Exists two widget types:
+   - Stateless: are immutable, meaning that their properties can’t change
+   - Stateful: allow user interaction, it can change its state and therefore its appearance
+___
+
+### Stateful Widgets
+
+* Requires at least two classes:
+   - StatefulWidget class: only create the state
+   ```
+   class MyStatefulWidget extends StatefulWidget {
+      @override
+      MyStatefulWidgetState createState() =&gt; MyStatefulWidgetState();
+   }
+   ```
+   - State class: contains all state logic
+   ```
+   class MyStatefulWidgetState extends State&lt;MyStatefulWidget&gt; {
+      ...
+      @override
+      Widget build(BuildContext context) {
+         ...
+      }
+      ...
+   }
+   ```
+___
+
+### Demo app
+
+* *lib* folder: contains all implemented code
+   - *main.dart* is the main class
+* *pubspec.yaml:* manages the assets and dependencies
+
+___
+
+### Resources
+
+* &lt;a href=&#34;https://flutter.dev/docs/development/ui/widgets-intro&#34; target=&#34;_blank&#34;&gt;Introduction to widgets&lt;/a&gt;
+* &lt;a href=&#34;https://flutter.dev/docs/reference/widgets&#34; target=&#34;_blank&#34;&gt;Flutter widget index&lt;/a&gt;
+* &lt;a href=&#34;https://flutter.dev/docs/cookbook&#34; target=&#34;_blank&#34;&gt;Cookbook&lt;/a&gt;
+* &lt;a href=&#34;https://api.flutter.dev/&#34; target=&#34;_blank&#34;&gt;Flutter API&lt;/a&gt;
+* &lt;a href=&#34;https://pub.dev/&#34; target=&#34;_blank&#34;&gt;Packages&lt;/a&gt;
+* &lt;a href=&#34;https://dart.dev/guides/language/language-tour&#34; target=&#34;_blank&#34;&gt;Dart language&lt;/a&gt;
+
+[Cerrar](/posts/development)
+
+	</section>
+	</div>
+	</div>
+	<script src="/revealjs/lib/js/head.min.js"></script>
+	<script src="/revealjs/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+		      	embedded : true,
+
+		        
+		        "center": true ,
+		        
+		        "controls": true ,
+		        
+		        "history": true ,
+		        
+		        "progress": true ,
+		        
+		        "transition":"concave",
+		        
+		        
+		        
+		        dependencies: [
+		          { src: '\/revealjs\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: '\/revealjs\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/math\/math.js', async: true}
+		        ]
+		      });
+	</script>
