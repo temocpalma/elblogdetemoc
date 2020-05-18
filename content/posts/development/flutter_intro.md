@@ -63,7 +63,23 @@ ___
 
 * Requires at least two classes:
    - StatefulWidget class: only create the state
+   ```
+   class MyStatefulWidget extends StatefulWidget {
+      @override
+      MyStatefulWidgetState createState() => MyStatefulWidgetState();
+   }
+   ```
    - State class: contains all state logic
+   ```
+   class MyStatefulWidgetState extends State<MyStatefulWidget> {
+      ...
+      @override
+      Widget build(BuildContext context) {
+         ...
+      }
+      ...
+   }
+   ```
 ___
 
 ### Demo app
@@ -81,6 +97,8 @@ ___
 * <a href="https://flutter.dev/docs/cookbook" target="_blank">Cookbook</a>
 * <a href="https://api.flutter.dev/" target="_blank">Flutter API</a>
 * <a href="https://pub.dev/" target="_blank">Packages</a>
+* <a href="https://dart.dev/guides/language/language-tour" target="_blank">Dart language</a>
+
 
 ___
 
